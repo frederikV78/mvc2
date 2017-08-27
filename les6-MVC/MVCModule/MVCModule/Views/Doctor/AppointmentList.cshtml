@@ -1,0 +1,14 @@
+﻿@using MVCModule.Helpers
+@model MVCModule.Models.AppointmentListViewModel
+
+@{
+    ViewBag.Title = "AppointmentList";
+}
+
+<h2>AppointmentList</h2>
+
+@(Html.DataGrid<MVCModule.Models.Appointment>(Model.Appointments, new MvcDataGridColumn[] {
+    new MvcDataGridColumn("Date", "Datum", "dd/MM/yyyy"),
+    new MvcDataGridColumn("Patient", "Patiënt"),
+    new MvcDataGridColumn("Reason", "Reden"),
+    new MvcDataGridActionColumn("[delete]", "DeleteAppointment", "Doctor", "Id") }))

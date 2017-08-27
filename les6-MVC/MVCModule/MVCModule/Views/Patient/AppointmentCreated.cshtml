@@ -1,0 +1,9 @@
+﻿@model MVCModule.Models.CreateAppointmentModel
+
+@{
+    ViewBag.Title = "AppointmentCreated";
+}
+
+<h2>AppointmentCreated</h2>
+
+<p>Your appointment at @Model.Date.ToString("dd/MM/yyyy HH:mm") with @Model.Doctors.Single(c => c.Id == Model.DoctorId).Name has been successfully created. See you then!</p>

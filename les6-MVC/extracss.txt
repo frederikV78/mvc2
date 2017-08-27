@@ -1,0 +1,89 @@
+
+#main {
+    width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C9DDFF;
+    box-shadow: 0 0 20px gray;
+}
+#header {
+    width: 900px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+#logo {
+    float: left;
+    display: block;
+}
+#loginview {
+    float: right;
+    display: block;
+    width: auto;
+    margin-right: 30px;
+}
+#menu {
+    width: 170px;
+    display: block;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#content {
+    width: 635px;
+    display: block;
+    float:left;
+    font-family:Calibri, Verdana, Arial;
+    font-size: 12pt;
+    background-color: white;
+    box-shadow: 0 0 15px gray;
+    padding: 20px;
+}
+#footer {
+    clear: both;
+    font-size: 9pt;
+    padding: 10px;
+    font-family: Calibri, Verdana, Arial;
+}
+.clear {
+    clear: both;
+}
+
+#logoleft {
+    font-size: 18pt;
+    font-family: Arial;
+    color: #1F72BD;
+}
+#logoright {
+    font-size: 18pt;
+    font-family: Arial;
+    color: red;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}

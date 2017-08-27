@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="The Practice"  description="">
+    <siteMapNode title="Home" description="" url="/Home/Index" />
+    <siteMapNode title="Patients" description="" >
+      <siteMapNode url="/Patient/Appointments" title="Appointments"  description="List all scheduled appointments" />
+      <siteMapNode url="/Patient/CreateAppointment" title="Create appointment"  description="Create a new appointment" />
+    </siteMapNode>
+    <siteMapNode title="Information" description="" url="/Home/OpeningHours" />
+    <siteMapNode title="Administration" description="" url="/Doctor/Appointments" />
+  </siteMapNode>
+</siteMap>

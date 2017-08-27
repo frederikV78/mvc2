@@ -1,0 +1,21 @@
+﻿@model MVCModule.Models.AppointmentsModel
+
+@{
+    ViewBag.Title = "Appointments";
+}
+
+<h2>Appointments</h2>
+
+@if (Model.Appointments.Count() > 0)
+{
+    <ul>
+        @foreach (var app in Model.Appointments)
+        {
+            <li>Date: @app.Date.ToString("dd/MM/yyyy HH:mm") with @Model.Doctors[app.DoctorId].Name (Reason: @app.Reason)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No appointments found.</p>
+}

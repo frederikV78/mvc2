@@ -1,0 +1,22 @@
+﻿@model MVCModule.Models.OpeningHoursModel
+
+@{
+    ViewBag.Title = "OpeningHours";
+}
+
+<h2>OpeningHours</h2>
+
+<ul>
+    @foreach (var v in Model.Days)
+    {
+        <li>
+            <strong>@v.Name</strong>
+            <ul>
+                @foreach (var w in v.Consultations)
+                {
+                    <li>Van @w.StartTime tot @w.EndTime - @w.Description</li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

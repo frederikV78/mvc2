@@ -1,0 +1,25 @@
+﻿@model MVCModule.Models.DoctorAppointmentsModel
+
+@{
+    ViewBag.Title = "Appointments";
+}
+
+<h2>Appointments (by doctor)</h2>
+@using (Ajax.BeginForm("GetAppointmentList", "Doctor", new AjaxOptions()
+{
+    UpdateTargetId = "applist",
+    InsertionMode = InsertionMode.Replace
+},
+                   new { id = "patientlist" }))
+{
+    <p>
+        @Html.DropDownListFor(m => m.DoctorId, new SelectList(Model.Doctors,
+       "ID", "Name", Model.DoctorId), new { onchange = "$('#patientlist').submit()" })
+    </p>
+}
+<div id="applist">
+    @{ Html.RenderPartial("~/Views/Doctor/AppointmentList.cshtml", Model.AppointmentList); }
+</div>
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryajax")
+}

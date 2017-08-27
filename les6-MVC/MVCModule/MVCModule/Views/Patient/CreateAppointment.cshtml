@@ -1,0 +1,37 @@
+﻿@model MVCModule.Models.CreateAppointmentModel
+
+@{
+    ViewBag.Title = "CreateAppointment";
+}
+
+<h2>CreateAppointment</h2>
+
+<p>Please enter the appointment data.</p>
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+    @Html.ValidationSummary(true)
+    <p>
+        @Html.LabelFor(m => m.DoctorId): @Html.DropDownListFor(m => m.DoctorId,
+        new SelectList(Model.Doctors, "ID", "Name"))
+        @Html.ValidationMessageFor(m => m.DoctorId)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Date) <input type="date" id="Date" name="Date"
+                                           class="date" value='@Model.Date.ToString("dd/MM/yyyy")' />
+        @Html.ValidationMessageFor(m => m.Date)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Reason): @Html.TextBoxFor(m => m.Reason)
+        @Html.ValidationMessageFor(m => m.Reason)
+    </p>
+    <p><input type="submit" value="Create appointment" /></p>
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript">
+        $(".date").datepicker({
+            defaultDate: $("#Date").val(), dateFormat: "dd/m/yy",
+            minDate: "@DateTime.Now.ToString("dd/MM/yyyy")"
+        });
+    </script>
+}

@@ -1,0 +1,23 @@
+﻿@model System.Web.SiteMapNodeCollection 
+
+@foreach (SiteMapNode node in Model)
+{
+    string url = node.Url;
+    if (url == null || url.Length == 0)
+    {
+        url = "#";
+    }
+    if (node.HasChildNodes)
+    {
+        <li class="dropdown-submenu">
+            <a tabindex="-1" href="@url">@node.Title</a>
+            <ul class="dropdown-menu">
+                @{ Html.RenderPartial("~/Views/Shared/Menu.cshtml", node.ChildNodes); }
+            </ul>
+        </li>
+    }
+    else
+    {
+        <li><a href="@url">@node.Title</a></li>
+        }
+    }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<OpeningHours>
+  <Day name="Monday">
+    <Hour begin="8u30" end="12u30" type="free consultation" />
+    <Hour begin="14u00" end="16u00" type="by appointment" />
+  </Day>
+  <Day name="Tuesday">
+    <Hour begin="10u00" end="12u30" type="by appointment" />
+    <Hour begin="14u00" end="20u30" type="by appointment" />
+  </Day>
+  <Day name="Wednesday">
+    <Hour begin="7u00" end="12u00" type="by appointment" />
+    <Hour begin="14u00" end="16u00" type="free consultation" />
+  </Day>
+  <Day name="Thursday">
+    <Hour begin="10u00" end="16u00" type="house call" />
+  </Day>
+  <Day name="Friday">
+    <Hour begin="8u30" end="12u30" type="free consultation" />
+    <Hour begin="8u30" end="12u30" type="by appointment" />
+  </Day>
+  <Day name="Saturday">
+    <Hour begin="9u00" end="12u00" type="free consultation" />
+  </Day>
+</OpeningHours>
